@@ -12,7 +12,7 @@ $ pnpm i
 $ pnpm run dev
 
 # build for production and launch server
-$ yarn run build
+$ pnpm run build
 
 ```
 

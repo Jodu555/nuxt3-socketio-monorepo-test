@@ -3,6 +3,7 @@ import { Hono } from 'hono';
 import { Server } from 'socket.io';
 import { setIO } from './utils.js';
 import type { ClientToServerEvents, InterServerEvents, ServerToClientEvents, SocketData } from '@nuxt-socketio-mono-test/types/socket';
+import broadcast from './broadcast.js';
 // import type { socket } from '@nuxt-socketio-mono-test/types';
 
 const app = new Hono();
@@ -10,6 +11,8 @@ const app = new Hono();
 app.get('/', (c) => {
     return c.text('Hello Hono!');
 });
+
+app.route('/broadcast', broadcast.broadcastRouter);
 
 const httpServer = serve({
     fetch: app.fetch,

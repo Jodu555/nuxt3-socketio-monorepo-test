@@ -1,4 +1,4 @@
-import type { ClientToServerEvents, ServerToClientEvents } from '@nuxt-socketio-mono-test/types';
+import type { ClientToServerEvents, ServerToClientEvents } from '@nuxt-socketio-mono-test/types/socket';
 import { io, Socket } from "socket.io-client";
 import { useTestStore } from '~/stores/test.store';
 
